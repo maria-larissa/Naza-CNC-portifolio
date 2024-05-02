@@ -3,8 +3,9 @@
     --blue: #205375;
     --orange: #F66B0E;
     --dark-gray: #0E0E0E;
+    --light-gray: #F5EFE6;
     --gray: #ADACA7;
-    --white: #FFFBE0;
+    --white: #FFFFFF;
 }
 
 *{
@@ -62,19 +63,34 @@ h1{
     background-image: url('./assets/banner2.png');
 }
 
-#gallery{height: auto;}
+.section3 img{
+    max-width: 70%;
+}
 
-.photos-gallery{
-    width: 80%;
-    margin: auto;
-    display: grid;
-    gap: 0.5rem;
-    column-count: 3;
-    
+#gallery, #time-line{height: auto;}
+
+.card-gallery{
+    /* width: auto; */
+    background-color: var(--white);
 }
 
 .photos-gallery img{
-    width: 25%;
+    width: 50%;
+    padding: 0.2rem;
+}
+
+
+.time-line-card{
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.time-line-card small{
+    color: var(--white);
+}
+
+.timeline-card-img{
+    width:30%;
     max-width: 40%;
 }
 
@@ -92,14 +108,28 @@ footer, .btn-footer{
     color:var(--white);
 }
 
+
+
+@media (min-width: 768px){
+    .timeline-card-img{
+        width:80%;
+        max-width: 90%;
+    }
+}
+
+
 @media (min-width: 992px) {
     h1{font-size: 5rem;}
 
-.section1{text-align: start;}
+    .section1{text-align: start;}
 
-#nazarenos-photo{
-    width: 30%;
-}
+    #nazarenos-photo{
+        width: 30%;
+    }
 
+
+    .photos-gallery img{
+        width: 30%;
+    }
 
 }
